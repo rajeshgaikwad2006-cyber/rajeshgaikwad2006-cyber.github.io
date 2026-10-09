@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="Rajesh Gaikwad's cybersecurity portfolio: web security, VAPT fundamentals, security labs, and projects.">
+<title>Rajesh Gaikwad | Cybersecurity Portfolio</title>
+<style>
+:root{--bg:#06101d;--panel:#0b192a;--panel2:#0d2035;--line:#183b5a;--text:#edf6ff;--muted:#a9bfd3;--blue:#20a4ff;--cyan:#59dcff;--green:#8ef0c2;--radius:18px;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#0b2c49 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#06101deF;backdrop-filter:blur(16px);border-bottom:1px solid #183149}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;line-height:1.2}.logo{width:42px;height:42px;border:1px solid var(--blue);border-radius:13px;display:grid;place-items:center;color:var(--cyan);font-size:22px;background:#0b2540}.brand small{display:block;color:var(--cyan);font-size:12px;font-weight:600;margin-top:4px}.navlinks{display:flex;gap:22px;align-items:center}.navlinks a{color:var(--muted);font-size:14px}.navlinks a:hover,.navlinks a.active{color:var(--cyan)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px;font-size:20px}
+.hero{padding:82px 0 64px;display:grid;grid-template-columns:1.35fr .85fr;gap:42px;align-items:center;position:relative}.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800}.hero h1{font-size:clamp(2.7rem,6vw,4.7rem);letter-spacing:-.055em;line-height:1.04;margin:14px 0}.hero h1 span{color:var(--blue)}.hero h2{font-size:clamp(1rem,2vw,1.3rem);font-weight:650;margin:0 0 18px;color:#d4e8fa}.hero p{color:var(--muted);max-width:660px;margin:0 0 25px}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:11px;font-weight:750;font-size:14px;border:1px solid var(--line);transition:.2s}.btn.primary{background:linear-gradient(135deg,#1598ff,#0874d1);border-color:#1598ff;color:white;box-shadow:0 8px 24px #0079ce2b}.btn:hover{transform:translateY(-2px);border-color:var(--cyan)}.hero-card{position:relative;min-height:280px;border:1px solid var(--line);border-radius:26px;padding:28px;background:linear-gradient(145deg,#102d49,#071321 75%);overflow:hidden;box-shadow:0 28px 70px #0005}.orb{position:absolute;width:210px;height:210px;right:-35px;top:-40px;border:1px solid #20a4ff55;border-radius:50%;box-shadow:0 0 0 22px #20a4ff0b,0 0 0 48px #20a4ff08}.shield{font-size:66px;color:var(--cyan);position:relative;filter:drop-shadow(0 0 22px #20a4ff66)}.terminal{position:relative;margin-top:20px;border:1px solid #285375;border-radius:12px;background:#030a12e8;padding:15px;color:#b8f8dd;font:12px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace}.terminal b{color:var(--cyan)}
+section{padding:54px 0;border-top:1px solid #18314988}.section-head{margin-bottom:25px}.section-head .eyebrow{letter-spacing:.12em}.section-head h2{font-size:clamp(1.7rem,4vw,2.35rem);letter-spacing:-.03em;margin:5px 0}.section-head p{margin:0;color:var(--muted)}
+.grid{display:grid;gap:16px}.skills{grid-template-columns:repeat(5,minmax(0,1fr))}.skill,.card,.about-box,.contact-box{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,#0d2034d9,#081421e8);padding:20px}.skill{display:flex;align-items:center;gap:11px;font-weight:700;font-size:14px;min-height:76px}.skill .ico{width:35px;height:35px;display:grid;place-items:center;background:#12304b;border:1px solid #205277;border-radius:10px;color:var(--cyan);font-size:17px;flex-shrink:0}
+.projects{grid-template-columns:repeat(2,minmax(0,1fr))}.card{display:flex;flex-direction:column;gap:10px}.card-top{display:flex;align-items:center;gap:12px}.card-icon{width:43px;height:43px;display:grid;place-items:center;background:#0d2b47;border:1px solid #1c679a;border-radius:12px;color:var(--cyan);font-size:21px}.card h3{margin:0;font-size:1.04rem}.card p{margin:0;color:var(--muted);font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:2px}.tag{font-size:11px;padding:4px 8px;border-radius:99px;background:#102b43;color:#bfeaff;border:1px solid #1b4869}.card-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:8px}.card-links a{font-size:13px;font-weight:750;color:var(--cyan)}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.about-box h3{margin:0 0 10px}.about-box p{color:var(--muted);margin:0 0 12px}.detail{display:flex;gap:10px;margin:10px 0;color:#d9eafa;font-size:14px}.detail span:first-child{color:var(--cyan);width:22px}.timeline{border-left:1px solid #24547b;margin:16px 0 0 8px;padding-left:22px}.timeline-item{position:relative;margin-bottom:20px}.timeline-item:before{content:"";position:absolute;left:-28px;top:8px;width:10px;height:10px;background:var(--blue);border-radius:50%;box-shadow:0 0 0 5px #1598ff20}.timeline-item h4{margin:0;font-size:15px}.timeline-item small{color:var(--cyan)}.timeline-item p{font-size:14px;margin:5px 0 0;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}.contact-list{display:grid;gap:12px}.contact-item{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);border-radius:12px;background:#0a1a2a}.contact-item .ico{color:var(--cyan);font-size:20px}.contact-item small{display:block;color:var(--muted)}.contact-box p{color:var(--muted)}.notice{font-size:12px!important;color:#8fa9be!important;margin-top:15px}
+footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.cyan{color:var(--cyan)}
+@media(max-width:900px){.navlinks{gap:13px}.skills{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{gap:25px}.hero-card{min-height:250px}}
+@media(max-width:680px){.container{width:min(100% - 28px,var(--max))}.nav{min-height:66px}.menu{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;padding:16px 22px;background:#06101df7;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.hero{padding:55px 0 42px;grid-template-columns:1fr}.hero-card{min-height:210px}.shield{font-size:48px}.skills{grid-template-columns:repeat(2,minmax(0,1fr))}.projects,.split,.contact-grid{grid-template-columns:1fr}section{padding:42px 0}.hero h1{font-size:3rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Rajesh Gaikwad home"><span class="logo">⛨</span><span>Rajesh Gaikwad<small>Cybersecurity Portfolio</small></span></a>
+    <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Journey</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container hero" id="home">
+    <div>
+      <div class="eyebrow">Hello, I'm</div>
+      <h1>Rajesh <span>Gaikwad</span></h1>
+      <h2>Cybersecurity Learner · Web Security · VAPT Fundamentals</h2>
+      <p>I build practical cybersecurity skills through hands-on labs and projects. My focus is web application security, understanding vulnerabilities, documenting evidence, and recommending useful fixes — always within an authorized scope.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">⌘ View My Projects</a>
+        <a class="btn" href="#contact">✉ Let's Connect</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Cybersecurity terminal illustration">
+      <div class="orb"></div><div class="shield">⛨</div>
+      <div class="terminal"><b>rajesh@cyber-lab:~$</b> whoami<br>Cybersecurity learner<br><b>rajesh@cyber-lab:~$</b> focus<br>Web security · VAPT fundamentals<br><b>rajesh@cyber-lab:~$</b> ethics<br>Authorized testing only<span class="cyan"> _</span></div>
+    </aside>
+  </div>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">My toolkit</div><h2>Skills &amp; Tools</h2><p>Tools and concepts I practice in learning labs and projects.</p></div>
+      <div class="grid skills">
+        <div class="skill"><span class="ico">⌁</span>Kali Linux</div><div class="skill"><span class="ico">⌕</span>Nmap</div><div class="skill"><span class="ico">⚡</span>Burp Suite</div><div class="skill"><span class="ico">◎</span>OWASP Juice Shop</div><div class="skill"><span class="ico">⌘</span>TryHackMe</div><div class="skill"><span class="ico">Py</span>Python</div><div class="skill"><span class="ico">↔</span>Networking</div><div class="skill"><span class="ico">▣</span>Linux</div><div class="skill"><span class="ico">⑂</span>Git &amp; GitHub</div><div class="skill"><span class="ico">⌨</span>VS Code</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Selected work</div><h2>Projects &amp; Practice</h2><p>Learning projects and lab work. Add repository/report links when they are published.</p></div>
+      <div class="grid projects">
+        <article class="card">
+          <div class="card-top"><div class="card-icon">▤</div><h3>Web Application Security Practice</h3></div>
+          <p>Practiced exploring common web application security issues in OWASP Juice Shop and organizing findings into a clear report with evidence and remediation guidance.</p>
+          <div class="tags"><span class="tag">OWASP Juice Shop</span><span class="tag">Burp Suite</span><span class="tag">Web Security</span></div>
+          <div class="card-links"><a href="https://owasp.org/www-project-juice-shop/" target="_blank" rel="noreferrer">↗ Lab details</a></div>
+        </article>
+        <article class="card">
+          <div class="card-top"><div class="card-icon">⌘</div><h3>Nmap Network Discovery Lab</h3></div>
+          <p>Practiced host and service discovery against lab systems to understand exposed ports, services, and basic attack-surface review.</p>
+          <div class="tags"><span class="tag">Nmap</span><span class="tag">Kali Linux</span><span class="tag">Networking</span></div>
+          <div class="card-links"><a href="https://nmap.org/book/man.html" target="_blank" rel="noreferrer">↗ Nmap documentation</a></div>
+        </article>
+        <article class="card">
+          <div class="card-top"><div class="card-icon">◈</div><h3>Phishing URL Detection</h3></div>
+          <p>Worked on a Python/Flask project concept that analyzes URL features and presents a phishing-risk result through a web interface.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">ML fundamentals</span></div>
+          <div class="card-links"><a href="https://github.com/rajeshgaikwad2006-cyber" target="_blank" rel="noreferrer">↗ Check GitHub</a></div>
+        </article>
+        <article class="card">
+          <div class="card-top"><div class="card-icon">◉</div><h3>CIPHER AI Desktop Assistant</h3></div>
+          <p>Developing a Python desktop-assistant concept with voice interaction, application launching, automation, and a cybersecurity-inspired interface.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Automation</span><span class="tag">Desktop UI</span></div>
+          <div class="card-links"><a href="https://github.com/rajeshgaikwad2006-cyber" target="_blank" rel="noreferrer">↗ Check GitHub</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container split">
+      <div class="about-box">
+        <div class="section-head"><div class="eyebrow">A little about me</div><h2>About Me</h2></div>
+        <p>I'm a computer science student interested in penetration testing, web application security, and ethical hacking. I enjoy learning by doing, solving lab challenges, and translating technical findings into clear, actionable recommendations.</p>
+        <div class="detail"><span>⌖</span><span>Chhatrapati Sambhajinagar, Maharashtra, India</span></div>
+        <div class="detail"><span>▤</span><span>Bachelor of Computer Science (BCS), Deogiri College</span></div>
+        <div class="detail"><span>◎</span><span>Career direction: Penetration Testing / Cybersecurity</span></div>
+      </div>
+      <div class="about-box" id="experience">
+        <div class="section-head"><div class="eyebrow">My journey</div><h2>Learning &amp; Education</h2></div>
+        <div class="timeline">
+          <div class="timeline-item"><h4>Cybersecurity Labs &amp; Projects</h4><small>Ongoing</small><p>Practice with Kali Linux, Nmap, Burp Suite, OWASP Juice Shop, and TryHackMe. Building portfolio-ready documentation.</p></div>
+          <div class="timeline-item"><h4>Bachelor of Computer Science (BCS)</h4><small>Deogiri College · Chhatrapati Sambhajinagar</small><p>Computer science studies with a growing focus on cybersecurity and practical security skills.</p></div>
+        </div>
+        <p class="notice">Only add internships, client engagements, or certifications here once completed and verified.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Have a project in mind?</div><h2>Let's Connect</h2><p>Open to entry-level opportunities, collaborative learning projects, and appropriately scoped freelance work.</p></div>
+      <div class="contact-grid">
+        <div class="contact-list">
+          <a class="contact-item" href="https://github.com/rajeshgaikwad2006-cyber" target="_blank" rel="noreferrer"><span class="ico">⌘</span><span><strong>GitHub</strong><small>github.com/rajeshgaikwad2006-cyber</small></span></a>
+          <a class="contact-item" href="https://www.linkedin.com/in/rajesh-gaikwad-b1494a258" target="_blank" rel="noreferrer"><span class="ico">in</span><span><strong>LinkedIn</strong><small>Connect professionally</small></span></a>
+          <a class="contact-item" href="https://www.instagram.com/rajesh_gaikwad.xd/" target="_blank" rel="noreferrer"><span class="ico">◎</span><span><strong>Instagram</strong><small>@rajesh_gaikwad.xd</small></span></a>
+          <a class="contact-item" href="tel:+918975725966"><span class="ico">☎</span><span><strong>Mobile</strong><small>+91 8975725966</small></span></a>
+          <a class="contact-item" href="mailto:rajeshgaikwad2006@gmail.com"><span class="ico">✉</span><span><strong>Email</strong><small>rajeshgaikwad2006@gmail.com</small></span></a>
+        </div>
+        <div class="contact-box">
+          <h3>Work with me</h3>
+          <p>For a potential project, please share the goal, the systems in scope, and written authorization for any security testing. I aim to communicate clearly and report findings responsibly.</p>
+          <a class="btn primary" href="https://www.linkedin.com/in/rajesh-gaikwad-b1494a258" target="_blank" rel="noreferrer">Message me on LinkedIn ↗</a>
+          <p class="notice">Please contact me only about genuine opportunities and authorized security testing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container footer-row"><span>© <span id="year"></span> Rajesh Gaikwad · Cybersecurity Portfolio</span><span>Built with care · <span class="cyan">Better Security, Safer Tomorrow</span></span></div></footer>
+<script>
+const menu=document.getElementById('menu'), nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';nav.querySelectorAll('a').forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
